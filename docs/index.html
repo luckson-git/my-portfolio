@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Luckson Mahenge — data analytics portfolio featuring machine learning and data engineering projects.">
+    <title>Luckson Mahenge | Data Analytics Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav wrap" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Homepage">LM<span>·</span>DATA</a>
+        <div class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a class="nav-cta" href="https://github.com/luckson-git/my-portfolio" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+      <div class="hero-grid wrap" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Available for data analytics opportunities</p>
+          <h1>I turn messy data into <em>clear decisions.</em></h1>
+          <p class="lede">I’m Luckson Mahenge, a data analytics professional building practical Python solutions across predictive modeling, API pipelines, and relational data systems.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="https://github.com/luckson-git/my-portfolio" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="signal-card" aria-label="Car price model performance summary">
+          <div class="card-topline"><span class="live-dot"></span> MODEL PERFORMANCE <span>2026</span></div>
+          <div class="score"><span>R²</span><strong>0.9426</strong></div>
+          <div class="chart" aria-hidden="true">
+            <i style="height:20%"></i><i style="height:33%"></i><i style="height:48%"></i><i style="height:56%"></i><i style="height:74%"></i><i style="height:83%"></i><i style="height:94%"></i>
+          </div>
+          <div class="chart-labels"><span>FEATURES</span><span>ACCURACY</span></div>
+          <div class="score-foot"><span>Holdout evaluation</span><span>Linear regression</span></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="impact wrap" aria-label="Portfolio highlights">
+        <div><strong>2</strong><span>Featured<br>projects</span></div>
+        <div><strong>3,800</strong><span>Vehicle records<br>analyzed</span></div>
+        <div><strong>3/3</strong><span>Weather app tests<br>passing</span></div>
+        <div><strong>0.78</strong><span>Lakh mean absolute<br>error</span></div>
+      </section>
+
+      <section class="work wrap" id="work">
+        <div class="section-heading">
+          <p class="eyebrow"><span></span> Selected work</p>
+          <h2>Projects with a measurable point of view.</h2>
+          <p>Each project is documented for technical reviewers and designed around a real analytical workflow.</p>
+        </div>
+
+        <article class="project project-featured">
+          <div class="project-visual price-visual" aria-hidden="true">
+            <div class="axis y-axis"><span>12</span><span>8</span><span>4</span><span>0</span></div>
+            <div class="plot">
+              <div class="trend"></div>
+              <b style="left:7%;bottom:19%"></b><b style="left:15%;bottom:27%"></b><b style="left:22%;bottom:31%"></b><b style="left:31%;bottom:39%"></b><b style="left:38%;bottom:42%"></b><b style="left:48%;bottom:51%"></b><b style="left:56%;bottom:61%"></b><b style="left:66%;bottom:62%"></b><b style="left:74%;bottom:75%"></b><b style="left:84%;bottom:79%"></b><b style="left:91%;bottom:90%"></b>
+            </div>
+            <div class="axis x-axis"><span>ACTUAL RESALE PRICE →</span><span>PREDICTED PRICE</span></div>
+          </div>
+          <div class="project-copy">
+            <p class="project-number">01 / MACHINE LEARNING</p>
+            <h3>Car Resale Price Prediction</h3>
+            <p>Built a reproducible regression baseline for estimating used-car resale value from vehicle attributes, ownership history, mileage, and accident history.</p>
+            <dl class="metrics">
+              <div><dt>R²</dt><dd>0.9426</dd></div>
+              <div><dt>MAE</dt><dd>0.7795 <small>lakh</small></dd></div>
+              <div><dt>RMSE</dt><dd>1.1621 <small>lakh</small></dd></div>
+            </dl>
+            <ul class="tags"><li>pandas</li><li>scikit-learn</li><li>Matplotlib</li><li>Regression</li></ul>
+            <a class="project-link" href="https://github.com/luckson-git/my-portfolio/tree/main/car-price-prediction" target="_blank" rel="noreferrer">Read the project <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="project project-reverse">
+          <div class="project-copy">
+            <p class="project-number">02 / DATA PIPELINE</p>
+            <h3>Weather Analytics App</h3>
+            <p>Developed a compact API-to-database pipeline that fetches historical weather observations, calculates statistics, and records each run in SQLite.</p>
+            <dl class="metrics">
+              <div><dt>SOURCE</dt><dd>Open-Meteo</dd></div>
+              <div><dt>STORAGE</dt><dd>SQLite</dd></div>
+              <div><dt>TESTS</dt><dd>3 / 3</dd></div>
+            </dl>
+            <ul class="tags"><li>REST API</li><li>SQLAlchemy</li><li>SQLite</li><li>unittest</li></ul>
+            <a class="project-link" href="https://github.com/luckson-git/my-portfolio/tree/main/weather-analytics-app" target="_blank" rel="noreferrer">Read the project <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="project-visual weather-visual" aria-hidden="true">
+            <div class="weather-header"><span>HISTORICAL WEATHER</span><span>NYC · MAY 08</span></div>
+            <div class="weather-stats"><div><strong>55°</strong><span>AVG TEMP</span></div><div><strong>13</strong><span>AVG WIND MPH</span></div><div><strong>.14</strong><span>AVG RAIN IN</span></div></div>
+            <div class="weather-line"><svg viewBox="0 0 520 100" preserveAspectRatio="none"><path d="M0 77 C40 70 55 38 97 54 S150 86 188 52 S245 20 285 48 S330 72 375 39 S430 19 467 42 S495 68 520 19"/></svg></div>
+            <div class="year-row"><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="skills" id="skills">
+        <div class="wrap skills-grid">
+          <div><p class="eyebrow"><span></span> Toolkit</p><h2>From question to working answer.</h2></div>
+          <div class="skill-list">
+            <div><span>01</span><strong>Analysis & modeling</strong><p>Python, pandas, scikit-learn, evaluation, visualization</p></div>
+            <div><span>02</span><strong>Data systems</strong><p>SQL, SQLite, SQLAlchemy, structured data design</p></div>
+            <div><span>03</span><strong>Production habits</strong><p>REST APIs, testing, version control, reproducible documentation</p></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <div><a class="brand" href="#top">LM<span>·</span>DATA</a><p>Data analytics portfolio<br>© 2026 Luckson Mahenge</p></div>
+      <a class="button button-primary" href="https://github.com/luckson-git/my-portfolio" target="_blank" rel="noreferrer">Explore the code <span aria-hidden="true">↗</span></a>
+    </footer>
+  </body>
+</html>

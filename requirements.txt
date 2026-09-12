@@ -1,0 +1,3 @@
+# Install dependencies per project:
+# pip install -r car-price-prediction/requirements.txt
+# pip install -r weather-analytics-app/requirements.txt

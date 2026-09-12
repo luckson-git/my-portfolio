@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local application state and secrets
+*.db
+.env
+
+# Data and generated analysis artifacts
+car-price-prediction/data/raw/
+car-price-prediction/reports/*.png
+!car-price-prediction/reports/.gitkeep
+
+# Notebook checkpoints and IDE files
+.ipynb_checkpoints/
+.idea/
+.vscode/

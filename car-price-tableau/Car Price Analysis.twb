@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" version="26.1" original-version="26.1" source-build="20261.26.0211.1127" source-platform="win">
+  <document-format-change-manifest>
+    <ManifestByVersion/>
+  </document-format-change-manifest>
+  <datasources>
+    <datasource name="cars" caption="Tata car records" inline="true" version="26.1">
+      <connection class="textscan" directory="Data" filename="cars.csv" password="" server="" locale="en_US">
+        <relation name="cars" table="[cars#csv]" type="table">
+          <columns header="yes" separator="," character-set="UTF-8" locale="en_US">
+            <column name="car_id" datatype="integer" ordinal="0"/>
+            <column name="brand" datatype="string" ordinal="1"/>
+            <column name="model" datatype="string" ordinal="2"/>
+            <column name="variant" datatype="string" ordinal="3"/>
+            <column name="fuel_type" datatype="string" ordinal="4"/>
+            <column name="transmission" datatype="string" ordinal="5"/>
+            <column name="body_type" datatype="string" ordinal="6"/>
+            <column name="engine_cc" datatype="integer" ordinal="7"/>
+            <column name="power_bhp" datatype="integer" ordinal="8"/>
+            <column name="mileage_kmpl" datatype="real" ordinal="9"/>
+            <column name="ex_showroom_price_lakh" datatype="real" ordinal="10"/>
+            <column name="year" datatype="integer" ordinal="11"/>
+            <column name="kilometers_driven" datatype="integer" ordinal="12"/>
+            <column name="owner_count" datatype="integer" ordinal="13"/>
+            <column name="accident_history" datatype="integer" ordinal="14"/>
+            <column name="resale_price_lakh" datatype="real" ordinal="15"/>
+          </columns>
+        </relation>
+      </connection>
+      <column name="[car_id]" caption="Car Id" datatype="integer" role="dimension" type="nominal"/>
+      <column name="[brand]" caption="Brand" datatype="string" role="dimension" type="nominal"/>
+      <column name="[model]" caption="Model" datatype="string" role="dimension" type="nominal"/>
+      <column name="[variant]" caption="Variant" datatype="string" role="dimension" type="nominal"/>
+      <column name="[fuel_type]" caption="Fuel Type" datatype="string" role="dimension" type="nominal"/>
+      <column name="[transmission]" caption="Transmission" datatype="string" role="dimension" type="nominal"/>
+      <column name="[body_type]" caption="Body Type" datatype="string" role="dimension" type="nominal"/>
+      <column name="[engine_cc]" caption="Engine Cc" datatype="integer" role="measure" type="quantitative"/>
+      <column name="[power_bhp]" caption="Power Bhp" datatype="integer" role="measure" type="quantitative"/>
+      <column name="[mileage_kmpl]" caption="Mileage Kmpl" datatype="real" role="measure" type="quantitative"/>
+      <column name="[ex_showroom_price_lakh]" caption="Ex Showroom Price Lakh" datatype="real" role="measure" type="quantitative"/>
+      <column name="[year]" caption="Year" datatype="integer" role="dimension" type="ordinal"/>
+      <column name="[kilometers_driven]" caption="Kilometers Driven" datatype="integer" role="measure" type="quantitative"/>
+      <column name="[owner_count]" caption="Owner Count" datatype="integer" role="measure" type="quantitative"/>
+      <column name="[accident_history]" caption="Accident History" datatype="integer" role="dimension" type="nominal"/>
+      <column name="[resale_price_lakh]" caption="Resale Price Lakh" datatype="real" role="measure" type="quantitative"/>
+      <column name="[price_gap]" caption="Price gap (lakh)" datatype="real" role="measure" type="quantitative">
+        <calculation class="tableau" formula="[ex_showroom_price_lakh] - [resale_price_lakh]"/>
+      </column>
+      <column name="[price_gap_pct]" caption="Price gap (%)" datatype="real" role="measure" type="quantitative">
+        <calculation class="tableau" formula="IF [ex_showroom_price_lakh] &gt; 0 THEN ([ex_showroom_price_lakh] - [resale_price_lakh]) / [ex_showroom_price_lakh] END"/>
+      </column>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Resale by model">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="cars" caption="Tata car records"/>
+          </datasources>
+          <datasource-dependencies datasource="cars">
+            <column name="[model]" caption="Model" datatype="string" role="dimension" type="nominal"/>
+            <column name="[resale_price_lakh]" caption="Resale Price Lakh" datatype="real" role="measure" type="quantitative"/>
+            <column-instance column="[model]" derivation="None" name="[none:model:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[resale_price_lakh]" derivation="Avg" name="[avg:resale_price_lakh:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+          </pane>
+        </panes>
+        <rows>[cars].[none:model:nk]</rows>
+        <cols>[cars].[avg:resale_price_lakh:qk]</cols>
+      </table>
+      <simple-id uuid="{16fbef9f-9955-588f-825d-5e8636a09978}"/>
+    </worksheet>
+    <worksheet name="Resale by vehicle year">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="cars" caption="Tata car records"/>
+          </datasources>
+          <datasource-dependencies datasource="cars">
+            <column name="[year]" caption="Year" datatype="integer" role="dimension" type="ordinal"/>
+            <column name="[resale_price_lakh]" caption="Resale Price Lakh" datatype="real" role="measure" type="quantitative"/>
+            <column-instance column="[year]" derivation="None" name="[none:year:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[resale_price_lakh]" derivation="Avg" name="[avg:resale_price_lakh:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Line"/>
+          </pane>
+        </panes>
+        <rows>[cars].[avg:resale_price_lakh:qk]</rows>
+        <cols>[cars].[none:year:nk]</cols>
+      </table>
+      <simple-id uuid="{8072a710-0e02-5c3d-9009-30f8401fc16e}"/>
+    </worksheet>
+    <worksheet name="Resale by fuel">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="cars" caption="Tata car records"/>
+          </datasources>
+          <datasource-dependencies datasource="cars">
+            <column name="[fuel_type]" caption="Fuel Type" datatype="string" role="dimension" type="nominal"/>
+            <column name="[resale_price_lakh]" caption="Resale Price Lakh" datatype="real" role="measure" type="quantitative"/>
+            <column-instance column="[fuel_type]" derivation="None" name="[none:fuel_type:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[resale_price_lakh]" derivation="Avg" name="[avg:resale_price_lakh:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+          </pane>
+        </panes>
+        <rows>[cars].[none:fuel_type:nk]</rows>
+        <cols>[cars].[avg:resale_price_lakh:qk]</cols>
+      </table>
+      <simple-id uuid="{0ecea9db-0d11-5ec0-b986-5e61dd41e2ed}"/>
+    </worksheet>
+    <worksheet name="Resale by transmission">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="cars" caption="Tata car records"/>
+          </datasources>
+          <datasource-dependencies datasource="cars">
+            <column name="[transmission]" caption="Transmission" datatype="string" role="dimension" type="nominal"/>
+            <column name="[resale_price_lakh]" caption="Resale Price Lakh" datatype="real" role="measure" type="quantitative"/>
+            <column-instance column="[transmission]" derivation="None" name="[none:transmission:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[resale_price_lakh]" derivation="Avg" name="[avg:resale_price_lakh:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+          </pane>
+        </panes>
+        <rows>[cars].[none:transmission:nk]</rows>
+        <cols>[cars].[avg:resale_price_lakh:qk]</cols>
+      </table>
+      <simple-id uuid="{c94c949a-31e5-5fb9-a770-37b86e45cf82}"/>
+    </worksheet>
+    <worksheet name="Price gap by model">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="cars" caption="Tata car records"/>
+          </datasources>
+          <datasource-dependencies datasource="cars">
+            <column name="[model]" caption="Model" datatype="string" role="dimension" type="nominal"/>
+            <column name="[price_gap_pct]" caption="Price gap (%)" datatype="real" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [ex_showroom_price_lakh] &gt; 0 THEN ([ex_showroom_price_lakh] - [resale_price_lakh]) / [ex_showroom_price_lakh] END"/>
+            </column>
+            <column name="[ex_showroom_price_lakh]" caption="Ex Showroom Price Lakh" datatype="real" role="measure" type="quantitative"/>
+            <column name="[resale_price_lakh]" caption="Resale Price Lakh" datatype="real" role="measure" type="quantitative"/>
+            <column-instance column="[model]" derivation="None" name="[none:model:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[price_gap_pct]" derivation="Avg" name="[avg:price_gap_pct:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+          </pane>
+        </panes>
+        <rows>[cars].[none:model:nk]</rows>
+        <cols>[cars].[avg:price_gap_pct:qk]</cols>
+      </table>
+      <simple-id uuid="{c244a9be-69fe-56e7-b39c-2b178b53caba}"/>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Car price overview">
+      <style/>
+      <size sizing-mode="fixed" minwidth="1200" maxwidth="1200" minheight="850" maxheight="850"/>
+      <zones>
+        <zone id="1" type-v2="text" x="1500" y="1500" w="96000" h="10500">
+          <formatted-text>
+            <run bold="true" fontsize="22">Tata car price analysis | 3,800 vehicles
+Mean resale: 7.58 lakh | All values in source lakh units</run>
+          </formatted-text>
+        </zone>
+        <zone id="2" name="Resale by model" x="1500" y="14000" w="47500" h="37500" show-title="true"/>
+        <zone id="3" name="Resale by vehicle year" x="50500" y="14000" w="47500" h="37500" show-title="true"/>
+        <zone id="4" name="Resale by fuel" x="1500" y="54000" w="47500" h="37500" show-title="true"/>
+        <zone id="5" name="Resale by transmission" x="50500" y="54000" w="47500" h="37500" show-title="true"/>
+      </zones>
+      <simple-id uuid="{638034ac-6d30-54ce-92dc-40e91b505416}"/>
+    </dashboard>
+  </dashboards>
+  <explain-data enabled-for-viewer="false" extreme-values-enabled-for-all="false">
+    <explanation-types/>
+  </explain-data>
+</workbook>

@@ -1,0 +1,11 @@
+{
+  "rows": 3800,
+  "unique_ids": 3800,
+  "source_sha256": "8a59f91a6790f67a371a586a43b5c2cd2cb25cb8996375f4ae2812994df159f6",
+  "worksheets": 5,
+  "dashboards": 1,
+  "schema": "Tableau 2026.1 official XSD with supplied external namespace import declarations",
+  "schema_valid": true,
+  "native_tableau_open_test": "Not performed; Tableau unavailable",
+  "mean_resale": 7.58078947368421
+}

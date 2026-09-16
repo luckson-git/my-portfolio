@@ -1,0 +1,142 @@
+{
+  "Resale by model": [
+    {
+      "group": "Altroz",
+      "vehicles": 600,
+      "mean": 5.9891
+    },
+    {
+      "group": "Harrier",
+      "vehicles": 400,
+      "mean": 13.5252
+    },
+    {
+      "group": "Nexon",
+      "vehicles": 600,
+      "mean": 8.217166666666667
+    },
+    {
+      "group": "Punch",
+      "vehicles": 600,
+      "mean": 5.607916666666667
+    },
+    {
+      "group": "Safari",
+      "vehicles": 400,
+      "mean": 15.074525000000001
+    },
+    {
+      "group": "Tiago",
+      "vehicles": 800,
+      "mean": 4.3653125
+    },
+    {
+      "group": "Tigor",
+      "vehicles": 400,
+      "mean": 4.965875
+    }
+  ],
+  "Resale by vehicle year": [
+    {
+      "group": "2020",
+      "vehicles": 513,
+      "mean": 4.153859649122807
+    },
+    {
+      "group": "2021",
+      "vehicles": 553,
+      "mean": 5.326582278481013
+    },
+    {
+      "group": "2022",
+      "vehicles": 548,
+      "mean": 6.439379562043796
+    },
+    {
+      "group": "2023",
+      "vehicles": 526,
+      "mean": 7.702148288973384
+    },
+    {
+      "group": "2024",
+      "vehicles": 548,
+      "mean": 8.51197080291971
+    },
+    {
+      "group": "2025",
+      "vehicles": 568,
+      "mean": 9.929049295774648
+    },
+    {
+      "group": "2026",
+      "vehicles": 544,
+      "mean": 10.746507352941178
+    }
+  ],
+  "Resale by fuel": [
+    {
+      "group": "CNG",
+      "vehicles": 400,
+      "mean": 5.250275
+    },
+    {
+      "group": "Diesel",
+      "vehicles": 1200,
+      "mean": 12.088066666666666
+    },
+    {
+      "group": "Petrol",
+      "vehicles": 2200,
+      "mean": 5.5460045454545455
+    }
+  ],
+  "Resale by transmission": [
+    {
+      "group": "Automatic",
+      "vehicles": 1400,
+      "mean": 9.764121428571428
+    },
+    {
+      "group": "Manual",
+      "vehicles": 2400,
+      "mean": 6.307179166666667
+    }
+  ],
+  "Price gap by model": [
+    {
+      "group": "Altroz",
+      "vehicles": 600,
+      "mean": 0.32220087719298246
+    },
+    {
+      "group": "Harrier",
+      "vehicles": 400,
+      "mean": 0.307459375
+    },
+    {
+      "group": "Nexon",
+      "vehicles": 600,
+      "mean": 0.3090140714749838
+    },
+    {
+      "group": "Punch",
+      "vehicles": 600,
+      "mean": 0.33517446969696973
+    },
+    {
+      "group": "Safari",
+      "vehicles": 400,
+      "mean": 0.2990095486111111
+    },
+    {
+      "group": "Tiago",
+      "vehicles": 800,
+      "mean": 0.33334396268291394
+    },
+    {
+      "group": "Tigor",
+      "vehicles": 400,
+      "mean": 0.3256892884036145
+    }
+  ]
+}

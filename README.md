@@ -1,7 +1,7 @@
 # Data Analytics Portfolio
 
 
-A compact, GitHub-ready portfolio featuring Python and Power BI projects that demonstrate applied analytics, machine learning, API integration, relational storage, testing, and clear technical communication.
+A compact, GitHub-ready portfolio featuring MySQL, Python, and Power BI projects that demonstrate applied analytics, machine learning, API integration, relational storage, testing, and clear technical communication.
 
 
 ## Featured projects
@@ -9,6 +9,7 @@ A compact, GitHub-ready portfolio featuring Python and Power BI projects that de
 
 | Project | Focus | Highlights |
 | --- | --- | --- |
+| [Employee Attrition MySQL Analysis](employee-attrition-mysql/) | MySQL 8, data quality, CTEs, window functions | Ten tested queries across 1,470 employee records, with reproducible imports and saved results. |
 | [Employee Attrition Dashboard](employee-attrition-powerbi/) | Power BI, Power Query, and DAX | Two-page dashboard analyzing 1,470 employee records, with 16.1% snapshot attrition share and department, overtime, job role, and tenure comparisons. |
 | [Car Price Prediction](car-price-prediction/) | Supervised machine learning | Predicts vehicle resale price from 3,800 vehicle records; benchmark achieved **R² = 0.9426**, **MAE = 0.7795 lakh**, and **RMSE = 1.1621 lakh** on a 20% holdout set. |
 | [Weather Analytics App](weather-analytics-app/) | API, statistics, and SQLite | Retrieves historical daily weather observations from Open-Meteo, calculates summary statistics, and persists a run to SQLite. |
@@ -17,7 +18,7 @@ A compact, GitHub-ready portfolio featuring Python and Power BI projects that de
 ## Skills demonstrated
 
 
-`Python` · `pandas` · `scikit-learn` · `data preprocessing` · `model evaluation` · `REST APIs` · `SQLite` · `SQLAlchemy` · `unit testing` · `data visualization` · `Power BI` · `Power Query` · `DAX`
+`MySQL` · `CTEs` · `window functions` · `Python` · `pandas` · `scikit-learn` · `data preprocessing` · `model evaluation` · `REST APIs` · `SQLite` · `SQLAlchemy` · `unit testing` · `data visualization` · `Power BI` · `Power Query` · `DAX`
 
 
 ## Repository structure
@@ -25,6 +26,7 @@ A compact, GitHub-ready portfolio featuring Python and Power BI projects that de
 
 ```text
 data-analytics-portfolio/
+├── employee-attrition-mysql/   # MySQL schema, import, analysis, and verified results
 ├── employee-attrition-powerbi/ # Power BI dashboard, preview, and project download
 ├── car-price-prediction/       # Reproducible regression workflow
 └── weather-analytics-app/      # API-to-database weather pipeline

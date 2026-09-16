@@ -1,0 +1,5 @@
+income_quartile	employees	min_income	max_income	leavers	attrition_pct
+1	368	1009	2911	108	29.35
+2	368	2911	4930	52	14.13
+3	367	4936	8380	39	10.63
+4	367	8381	19999	38	10.35

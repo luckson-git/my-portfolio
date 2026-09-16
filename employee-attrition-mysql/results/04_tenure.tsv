@@ -1,0 +1,5 @@
+tenure_band	employees	leavers	attrition_pct
+01: 0-1 years	215	75	34.88
+02: 2-4 years	365	66	18.08
+03: 5-9 years	524	58	11.07
+04: 10+ years	366	38	10.38

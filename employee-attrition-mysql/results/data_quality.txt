@@ -1,0 +1,6 @@
+records	unique_ids	leavers	retained
+1470	1470	237	1233
+invalid_records
+0
+employee_count_values	over18_values	standard_hours_values
+1	1	1

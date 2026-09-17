@@ -1,0 +1,12 @@
+term,VIF
+Intercept,1.0
+"C(OverTime, Treatment(reference=""No""))[T.Yes]",1.0079950673613691
+"C(JobSatisfaction, Treatment(reference=1))[T.2]",1.599405778483872
+"C(JobSatisfaction, Treatment(reference=1))[T.3]",1.7714036829520259
+"C(JobSatisfaction, Treatment(reference=1))[T.4]",1.781780987409641
+age10,59.85260209960132
+log2_income,658.1768515068184
+tenure5,8.279758894633744
+I(age10 ** 2),59.10111337544178
+I(log2_income ** 2),660.6162191587404
+I(tenure5 ** 2),8.00180521653041

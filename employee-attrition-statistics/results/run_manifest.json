@@ -1,0 +1,21 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.3.0",
+    "nbconvert": "7.17.1",
+    "tinycss2": "1.5.1"
+  },
+  "seed": 20260916,
+  "bootstrap_resamples": 5000,
+  "sha256": "a5c31e38bd7fafc9bc333884eb181b06b41b8e5e488e8f7ccb27199fb3be7659",
+  "rows": 1470,
+  "columns": 35
+}

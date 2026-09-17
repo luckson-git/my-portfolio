@@ -1,0 +1,9 @@
+,flagged_count
+negative numeric values,0
+nonpositive age,0
+nonpositive monthly income,0
+company tenure exceeds working years,0
+working years exceed age,0
+YearsInCurrentRole exceeds company tenure,0
+YearsSinceLastPromotion exceeds company tenure,0
+YearsWithCurrManager exceeds company tenure,0

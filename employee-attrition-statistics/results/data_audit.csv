@@ -1,0 +1,36 @@
+,dtype,missing,unique,observed_values_or_range,analysis_role
+Age,int64,0,43,18 to 60,numeric; units interpreted cautiously
+Attrition,str,0,2,"No, Yes",outcome
+BusinessTravel,str,0,3,"Non-Travel, Travel_Frequently, Travel_Rarely",categorical
+DailyRate,int64,0,886,102 to 1499,numeric; units interpreted cautiously
+Department,str,0,3,"Human Resources, Research & Development, Sales",categorical
+DistanceFromHome,int64,0,29,1 to 29,numeric; units interpreted cautiously
+Education,int64,0,5,"1, 2, 3, 4, 5",coded category; anchors undocumented
+EducationField,str,0,6,"Human Resources, Life Sciences, Marketing, Medical, Other, Technical Degree",categorical
+EmployeeCount,int64,0,1,1,excluded: constant
+EmployeeNumber,int64,0,1470,1 to 2068,excluded: identifier
+EnvironmentSatisfaction,int64,0,4,"1, 2, 3, 4",coded category; anchors undocumented
+Gender,str,0,2,"Female, Male",categorical
+HourlyRate,int64,0,71,30 to 100,numeric; units interpreted cautiously
+JobInvolvement,int64,0,4,"1, 2, 3, 4",coded category; anchors undocumented
+JobLevel,int64,0,5,"1, 2, 3, 4, 5",coded category; anchors undocumented
+JobRole,str,0,9,"Healthcare Representative, Human Resources, Laboratory Technician, Manager, Manufacturing Director, Research Director, Research Scientist, Sales Executive, Sales Representative",categorical
+JobSatisfaction,int64,0,4,"1, 2, 3, 4",coded category; anchors undocumented
+MaritalStatus,str,0,3,"Divorced, Married, Single",categorical
+MonthlyIncome,int64,0,1349,1009 to 19999,numeric; units interpreted cautiously
+MonthlyRate,int64,0,1427,2094 to 26999,numeric; units interpreted cautiously
+NumCompaniesWorked,int64,0,10,"0, 1, 2, 3, 4, 5, 6, 7, 8, 9",numeric; units interpreted cautiously
+Over18,str,0,1,Y,excluded: constant
+OverTime,str,0,2,"No, Yes",categorical
+PercentSalaryHike,int64,0,15,11 to 25,numeric; units interpreted cautiously
+PerformanceRating,int64,0,2,"3, 4",coded category; anchors undocumented
+RelationshipSatisfaction,int64,0,4,"1, 2, 3, 4",coded category; anchors undocumented
+StandardHours,int64,0,1,80,excluded: constant
+StockOptionLevel,int64,0,4,"0, 1, 2, 3",coded category; anchors undocumented
+TotalWorkingYears,int64,0,40,0 to 40,numeric; units interpreted cautiously
+TrainingTimesLastYear,int64,0,7,"0, 1, 2, 3, 4, 5, 6",numeric; units interpreted cautiously
+WorkLifeBalance,int64,0,4,"1, 2, 3, 4",coded category; anchors undocumented
+YearsAtCompany,int64,0,37,0 to 40,numeric; units interpreted cautiously
+YearsInCurrentRole,int64,0,19,0 to 18,numeric; units interpreted cautiously
+YearsSinceLastPromotion,int64,0,16,0 to 15,numeric; units interpreted cautiously
+YearsWithCurrManager,int64,0,18,0 to 17,numeric; units interpreted cautiously

@@ -1,0 +1,15 @@
+,value
+converged,True
+n,1470
+events,237
+slope_parameters,7
+events_per_slope_parameter,33.857142857142854
+design_rank,8
+design_columns,8
+minimum_fitted_probability,0.005820044219066603
+maximum_fitted_probability,0.7396599541555857
+max_cooks_distance,0.04839368278889204
+cooks_above_4_over_n,123
+quadratic_LR_statistic,31.943736379154416
+quadratic_LR_df,3
+quadratic_LR_p,5.378321015980734e-07
